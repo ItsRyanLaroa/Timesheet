@@ -8,6 +8,7 @@
 
 import java.awt.Color;
 import internalPage.Dashboard;
+import userPage.userScreen;
 
 /**
  *
@@ -97,6 +98,9 @@ public class FirstFrame extends javax.swing.JFrame {
 
         userPage.setBackground(new java.awt.Color(22, 123, 123));
         userPage.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                userPageMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 userPageMouseEntered(evt);
             }
@@ -227,6 +231,11 @@ public class FirstFrame extends javax.swing.JFrame {
       Dashboard DB = new Dashboard();
       body.add(DB).setVisible(true);
     }//GEN-LAST:event_dashpaneMouseClicked
+
+    private void userPageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userPageMouseClicked
+       userScreen up = new userScreen();
+       body.add(up).setVisible(true);
+    }//GEN-LAST:event_userPageMouseClicked
 
     /**
      * @param args the command line arguments
