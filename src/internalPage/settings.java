@@ -5,19 +5,28 @@
  */
 package internalPage;
 
+
+import java.awt.Color;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
+
 /**
  *
  * @author USER
  */
-public class Dashboard extends javax.swing.JInternalFrame {
+
+public class settings extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form userDashboard
+     * Creates new form settings
      */
-    public Dashboard() {
+    public settings() {
         initComponents();
     }
-
+     Color navcolor = new Color (22,123,123);
+     Color headcolor = new Color (0,102,102);
+     Color bodycolor = new Color (204,204,204);
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,6 +39,12 @@ public class Dashboard extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
@@ -53,6 +68,8 @@ public class Dashboard extends javax.swing.JInternalFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
 
+        setPreferredSize(new java.awt.Dimension(861, 568));
+
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setLayout(null);
 
@@ -60,12 +77,37 @@ public class Dashboard extends javax.swing.JInternalFrame {
         jPanel2.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel1.setText("BARANGAY TIMESHEET MANAGEMENT SYSTEM");
+        jLabel1.setText("ACCOUNT SETTINGS");
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(40, 40, 570, 40);
+        jLabel1.setBounds(10, 10, 260, 40);
+
+        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel15.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel15.setText("Address:");
+        jPanel13.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 280, -1));
+
+        jLabel16.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel16.setText("Account name: Username Here");
+        jPanel13.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 310, -1));
+
+        jLabel17.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel17.setText("ID number:");
+        jPanel13.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 290, -1));
+
+        jLabel18.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel18.setText("Position:");
+        jPanel13.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 280, -1));
+
+        jLabel19.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel19.setText("Email or Phone number:");
+        jPanel13.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 280, -1));
+
+        jPanel2.add(jPanel13);
+        jPanel13.setBounds(10, 70, 590, 160);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(230, 0, 610, 130);
+        jPanel2.setBounds(230, 0, 610, 240);
 
         jPanel3.setBackground(new java.awt.Color(22, 123, 123));
         jPanel3.setLayout(null);
@@ -151,25 +193,41 @@ public class Dashboard extends javax.swing.JInternalFrame {
         jPanel1.add(jPanel3);
         jPanel3.setBounds(0, 0, 210, 530);
 
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jPanel4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jPanel4MouseExited(evt);
+            }
+        });
         jPanel4.setLayout(null);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/pp.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/profile.png"))); // NOI18N
         jPanel4.add(jLabel2);
-        jLabel2.setBounds(10, 10, 180, 200);
+        jLabel2.setBounds(10, 30, 180, 180);
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel6.setText("MANAGE USER");
+        jLabel6.setText("EDIT PROFILE");
         jPanel4.add(jLabel6);
-        jLabel6.setBounds(20, 220, 150, 40);
+        jLabel6.setBounds(30, 220, 130, 40);
 
         jPanel1.add(jPanel4);
-        jPanel4.setBounds(250, 180, 190, 270);
+        jPanel4.setBounds(240, 250, 200, 270);
 
+        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jPanel5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jPanel5MouseExited(evt);
+            }
+        });
         jPanel5.setLayout(null);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/rep.png"))); // NOI18N
         jPanel5.add(jLabel3);
-        jLabel3.setBounds(20, 20, 160, 190);
+        jLabel3.setBounds(10, 20, 160, 190);
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel7.setText("REPORTS");
@@ -177,9 +235,12 @@ public class Dashboard extends javax.swing.JInternalFrame {
         jLabel7.setBounds(50, 220, 100, 40);
 
         jPanel1.add(jPanel5);
-        jPanel5.setBounds(450, 180, 190, 270);
+        jPanel5.setBounds(450, 250, 190, 270);
 
         jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel6MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jPanel6MouseEntered(evt);
             }
@@ -189,17 +250,17 @@ public class Dashboard extends javax.swing.JInternalFrame {
         });
         jPanel6.setLayout(null);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/set.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/log out.png"))); // NOI18N
         jPanel6.add(jLabel4);
-        jLabel4.setBounds(0, 30, 200, 190);
+        jLabel4.setBounds(10, 30, 170, 190);
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel8.setText("SETTINGS");
+        jLabel8.setText("LOG OUT");
         jPanel6.add(jLabel8);
         jLabel8.setBounds(50, 220, 100, 40);
 
         jPanel1.add(jPanel6);
-        jPanel6.setBounds(650, 180, 190, 270);
+        jPanel6.setBounds(650, 250, 190, 270);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -209,19 +270,41 @@ public class Dashboard extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 523, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 532, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPanel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseEntered
-        // TODO add your handling code here:
+        jPanel6.setBackground(navcolor);
     }//GEN-LAST:event_jPanel6MouseEntered
 
     private void jPanel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseExited
-        // TODO add your handling code here:
+        jPanel6.setBackground(bodycolor);
     }//GEN-LAST:event_jPanel6MouseExited
+
+    private void jPanel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseEntered
+        jPanel5.setBackground(navcolor);
+    }//GEN-LAST:event_jPanel5MouseEntered
+
+    private void jPanel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseExited
+        jPanel5.setBackground(bodycolor);
+    }//GEN-LAST:event_jPanel5MouseExited
+
+    private void jPanel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseEntered
+        jPanel4.setBackground(navcolor);
+    }//GEN-LAST:event_jPanel4MouseEntered
+
+    private void jPanel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseExited
+        jPanel4.setBackground(bodycolor);
+    }//GEN-LAST:event_jPanel4MouseExited
+
+    private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
+         JFrame mainFrame =(JFrame) SwingUtilities.getWindowAncestor(this);
+         mainFrame.dispose();
+   
+    }//GEN-LAST:event_jPanel6MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -231,6 +314,11 @@ public class Dashboard extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -242,6 +330,7 @@ public class Dashboard extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
